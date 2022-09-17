@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  background: #000;
+  text-align: center;
+  font-family: sans-serif;
+  color: #f8fafc;
+  touch-action: manipulation;
+}
+
+.v {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity .3s .5s ease-in;
+}
+
+.w .v {
+  opacity: 1;
+}
+
+.m {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 100%;
+  background: #0f172a;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: all .3s ease-out;
+}
+
+.w .m {
+  transform: translate3d(0, -100%, 0);
+}
+
+.h {
+  flex: 0 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+  color: #64748b;
+}
+
+.h > * { 
+  margin: 0 .25rem;
+}
+
+.l {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-family: 'Plaster', sans-serif;
+  font-size: 2rem;
+}
+
+.s .l {
+  pointer-events: none;
+}
+
+.i {
+  display: block;
+  width: 3.5rem;
+  margin: .25rem 0;
+  border: 1px solid #475569;
+  line-height: 3.5rem;
+  cursor: pointer;
+  transform: rotate(180deg) scaleX(-1);
+  transition: all .15s linear;
+}
+
+@media screen and (min-height: 640px) {
+  .i {
+    width: 4rem;
+    line-height: 4rem; 
+  }
+}
+
+.i.a {
+  border-color: #fef3c7;
+  background: #f59e0b;
+  color: #0f172a;
+}
+
+.s .i {
+  border-color: #d1fae5;
+  background: #10b981;
+  color: #0f172a;
+  transform: none;
+}
+
+.b {
+  flex: 0 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 0;
+  border-top: 1px solid #60a5fa;
+  background: #2563eb;
+  font-size: 1.5rem;
+  color: #dbeafe;
+  cursor: pointer;
+  transition: all .15s;
+}
+
+.b > :last-child { display: none; }
+.s .b > :first-child { display: none; }
+.s .b > :last-child { display: inline-block; }
+
+.e .b {
+  border-top-color: #f87171;
+  background: #dc2626;
+  color: #fee2e2;
+}
+
+.s .b {
+  border-top-color: #34d399;
+  background: #059669;
+  color: #d1fae5;
+}
+
+svg {
+  display: inline-block;
+  height: 1em;
+  width: auto;
+}
